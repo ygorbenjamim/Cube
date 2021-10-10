@@ -1,0 +1,3 @@
+O key user pode selecionar quais setores será incluidos
+O key user pode inserir quais subsetores serão incluidos
+O sistema deve fazer uma requisição dos setores no banco de dados.
