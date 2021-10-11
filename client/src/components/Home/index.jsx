@@ -123,6 +123,26 @@ const Home = () => {
           </button>
           <button
             className="call-option"
+            style={{ display: sector[5] }}
+          >
+            <RiInboxUnarchiveLine
+              size={30}
+              color={'#1e88e5'}
+            />
+            <p>Marketing</p>
+          </button>
+          <button
+            className="call-option"
+            style={{ display: sector[5] }}
+          >
+            <RiInboxUnarchiveLine
+              size={30}
+              color={'#1e88e5'}
+            />
+            <p>Logística</p>
+          </button>
+          <button
+            className="call-option"
             style={{ display: sector[6] }}
           >
             <RiExchangeBoxLine

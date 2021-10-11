@@ -27,6 +27,7 @@
 
 .mid-body-home {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   flex-direction: row;
 }
@@ -40,8 +41,8 @@
   padding: 10px;
   border-radius: 10px;
   border: 1px solid #aaa;
-  min-width: 190px;
-  min-height: 200px;
+  min-width: 150px;
+  min-height: 150px;
   background-color: transparent;
   color: #444;
   font-size: 16px;
