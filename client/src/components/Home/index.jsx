@@ -1,6 +1,8 @@
 import React from 'react';
 import {
   RiComputerLine,
+  RiSendPlaneFill,
+  RiLayoutFill,
   RiBarChartFill,
   RiPhoneFindLine,
   RiBankLine,
@@ -125,7 +127,7 @@ const Home = () => {
             className="call-option"
             style={{ display: sector[5] }}
           >
-            <RiInboxUnarchiveLine
+            <RiSendPlaneFill
               size={30}
               color={'#1e88e5'}
             />
@@ -135,7 +137,7 @@ const Home = () => {
             className="call-option"
             style={{ display: sector[5] }}
           >
-            <RiInboxUnarchiveLine
+            <RiLayoutFill
               size={30}
               color={'#1e88e5'}
             />

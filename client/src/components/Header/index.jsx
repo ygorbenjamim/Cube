@@ -29,8 +29,11 @@ const Header = () => {
     sidebarName.classList.toggle('hide');
   }
 
+  var el = document.getElementById("header-container");   
+  el.addEventListener("click", () => { alert('click') }, false); 
+
   return (
-    <div className="header-container">
+    <div className="header-container" id="header-container">
       {/* Submenu flutuante */}
       <div
         className="options-user"
