@@ -3,3 +3,4 @@ O key user pode inserir quais subsetores serão incluidos
 O sistema deve fazer uma requisição dos setores no banco de dados.
 Icone de notificações -> Chamados subdivididos
 Mensagens de notificações
+Será registrado o período de trabalho do funcionário para que o chamado não vença por outro motivo.
