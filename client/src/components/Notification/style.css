@@ -26,10 +26,10 @@
 .notification-number {
   display: flex;
   position: absolute;
-  right: -4px;
-  top: -5px;
-  width: 30px;
-  height: 30px;
+  right: -7px;
+  top: -9px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
   background-color: #ff6961;
   color: #e3e3e3;
@@ -54,7 +54,17 @@
   bottom: 90px;
   padding: 15px;
   width: 270px;
-  height: 350px;
+  height: 0;
+  opacity: 0;
+  pointer-events: none;
   border-radius: 8px;
   background-color: #999;
+  transition: height 0.2s linear;
+}
+
+.notification-content.hide {
+  opacity: 1;
+  height: 350px;
+  pointer-events: visible;
+  transition: height 0.2s linear;
 }

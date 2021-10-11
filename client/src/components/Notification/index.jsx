@@ -6,8 +6,7 @@ import './style.css';
 
 const Notification = () => {
   const [displayNotification, setDisplayNotification] = useState('flex');
-  const [displayContent, setDisplayContent] = useState('none');
-  const value = 99;
+  const value = 89;
 
   useEffect(() => {
     if(value <= 0){
@@ -16,12 +15,9 @@ const Notification = () => {
   }, [ value ]);
 
   function handleNotification() {
+    var content = document.querySelector('.notification-content');
+    content.classList.toggle('hide');
     setDisplayNotification('none');
-    if(displayContent === 'none'){
-      setDisplayContent('flex');
-    } else {
-      setDisplayContent('none');
-    }
   }
 
   return (
@@ -37,13 +33,10 @@ const Notification = () => {
         style={{ display: displayNotification }}
       >
         <p className="notification-number-value">
-          { value > 99 ? '99' : value }
+          { value > 99 ? '+99' : value }
         </p>
       </div>
-      <div
-        className="notification-content"
-        style={{ display: displayContent }}
-      >
+      <div className="notification-content">
         <p>Label</p>
         <p>Lorem ipsum dolor sit amet.</p>
         <p>Label</p>

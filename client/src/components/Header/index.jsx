@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import {
   RiUser3Line,
+  RiSearchLine,
+  RiFilter2Fill,
   RiSettings2Line,
   RiAlertLine,
   RiMenuFill,
@@ -29,11 +31,15 @@ const Header = () => {
     sidebarName.classList.toggle('hide');
   }
 
-  var el = document.getElementById("header-container");   
-  el.addEventListener("click", () => { alert('click') }, false); 
+  function handleSearch() {
+    var searchInput = document.querySelector('.find-call-header-input');
+    var filterBtn = document.querySelector('.btn-filter-header');
+    searchInput.classList.toggle('hide');
+    filterBtn.classList.toggle('hide');
+  }
 
   return (
-    <div className="header-container" id="header-container">
+    <div className="header-container">
       {/* Submenu flutuante */}
       <div
         className="options-user"
@@ -111,6 +117,23 @@ const Header = () => {
           />
         </button>
         <h1>Cube</h1>
+        <div className="search-call-header">
+          <button
+            className="btn-filter-header"
+          >
+            <RiFilter2Fill />
+          </button>
+          <input
+            className="find-call-header-input"
+            placeholder="Buscar Chamado..."
+          />
+          <button
+            className="btn-search-header"
+            onClick={ handleSearch }
+          >
+            <RiSearchLine />
+          </button>
+        </div>
         <div className="user">
           <button
             className="btn-user"
@@ -119,6 +142,14 @@ const Header = () => {
             <img src="https://source.unsplash.com/100x100" alt="perfil"/>
           </button>
         </div>
+      </div>
+      <div className="header-bottom">
+        <button className="header-bottom-item">
+          <p>Meus atendimentos</p>
+        </button>
+        <button className="header-bottom-item">
+          <p>Meu departamento</p>
+        </button>
       </div>
     </div>
   );
