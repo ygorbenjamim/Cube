@@ -41,6 +41,14 @@ const Home = () => {
       status: 'flex'
     },
     {
+      name: 'Marketing',
+      status: 'flex'
+    },
+    {
+      name: 'Logística',
+      status: 'flex'
+    },
+    {
       name: 'Comercial',
       status: 'flex'
     }
@@ -53,7 +61,9 @@ const Home = () => {
     getSector[3].status,
     getSector[4].status,
     getSector[5].status,
-    getSector[6].status
+    getSector[6].status,
+    getSector[7].status,
+    getSector[8].status
   ];
 
   return (
@@ -125,7 +135,7 @@ const Home = () => {
           </button>
           <button
             className="call-option"
-            style={{ display: sector[5] }}
+            style={{ display: sector[6] }}
           >
             <RiSendPlaneFill
               size={30}
@@ -135,7 +145,7 @@ const Home = () => {
           </button>
           <button
             className="call-option"
-            style={{ display: sector[5] }}
+            style={{ display: sector[7] }}
           >
             <RiLayoutFill
               size={30}
@@ -145,7 +155,7 @@ const Home = () => {
           </button>
           <button
             className="call-option"
-            style={{ display: sector[6] }}
+            style={{ display: sector[8] }}
           >
             <RiExchangeBoxLine
               size={30}

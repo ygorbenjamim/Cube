@@ -37,12 +37,7 @@ const Notification = () => {
         </p>
       </div>
       <div className="notification-content">
-        <p>Label</p>
-        <p>Lorem ipsum dolor sit amet.</p>
-        <p>Label</p>
-        <p>Lorem ipsum dolor sit amet.</p>
-        <p>Label</p>
-        <p>Lorem ipsum dolor sit amet.</p>
+        
       </div>
     </div>
   );
