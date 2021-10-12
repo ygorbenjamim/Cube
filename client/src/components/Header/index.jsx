@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   RiUser3Line,
   RiSearchLine,
@@ -16,6 +16,8 @@ import './style.css';
 const Header = () => {
   // Variáveis
   const [submenu, setSubmenu] = useState('none');
+  const [displaySearch, setDisplaySearch] = useState('flex');
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   // Funções
   function handleSubmenu() {
@@ -37,6 +39,17 @@ const Header = () => {
     searchInput.classList.toggle('hide');
     filterBtn.classList.toggle('hide');
   }
+
+  useEffect(() => {
+    window.addEventListener('resize', () => {
+      setScreenWidth(window.innerWidth);
+    });
+    if(screenWidth <= 660){
+      setDisplaySearch('none');
+    } else {
+      setDisplaySearch('flex');
+    }
+  }, [ screenWidth ]);
 
   return (
     <div className="header-container">
@@ -117,7 +130,10 @@ const Header = () => {
           />
         </button>
         <h1>Cube</h1>
-        <div className="search-call-header">
+        <div
+          className="search-call-header"
+          style={{ display: displaySearch }}
+        >
           <button
             className="btn-filter-header"
           >
