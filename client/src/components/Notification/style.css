@@ -58,7 +58,7 @@
   opacity: 0;
   pointer-events: none;
   border-radius: 8px;
-  background-color: #999;
+  background-color: #fff;
   transition: height 0.2s linear;
 }
 

@@ -51,6 +51,7 @@
 
 .call-option:hover {
   cursor: pointer;
-  background-color: #d3d3d3;
+  box-shadow: 0 0 1em #333;
+  
   transition: all 0.2s ease;
 }
