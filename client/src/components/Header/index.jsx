@@ -18,19 +18,20 @@ const Header = () => {
   const [submenu, setSubmenu] = useState('none');
   const [displaySearch, setDisplaySearch] = useState('flex');
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  var side = document.getElementsByClassName('sidebar');
 
   // Funções
+  function handleMenu() {
+    var sidebarName = document.querySelector('.sidebar');
+    sidebarName.classList.toggle('hide');
+  }
+
   function handleSubmenu() {
     if (submenu === 'none') {
       setSubmenu('flex');
     } else {
       setSubmenu('none');
     }
-  }
-
-  function handleMenu() {
-    var sidebarName = document.querySelector('.sidebar');
-    sidebarName.classList.toggle('hide');
   }
 
   function handleSearch() {
@@ -43,6 +44,12 @@ const Header = () => {
   useEffect(() => {
     window.addEventListener('resize', () => {
       setScreenWidth(window.innerWidth);
+    });
+    side[0].addEventListener('click', () => {
+      alert('In');
+    });
+    side[0].addEventListener('focusout', () => {
+      alert('Out');
     });
     if(screenWidth <= 660){
       setDisplaySearch('none');
