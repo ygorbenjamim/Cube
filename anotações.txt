@@ -4,3 +4,4 @@ O sistema deve fazer uma requisição dos setores no banco de dados.
 Icone de notificações -> Chamados subdivididos
 Mensagens de notificações
 Será registrado o período de trabalho do funcionário para que o chamado não vença por outro motivo.
+Na criação de um novo chamado será perguntado se o chamado possui um grau de urgência, caso sim, será possível direcioná-lo para um atendente.

@@ -109,10 +109,14 @@ const Header = () => {
             </button>
           </li>
           <li>
-            <button className="btn-menu-item">
+            <Link
+              className="btn-menu-item"
+              to="/dashboard"
+              onClick={ handleMenu }
+            >
               <RiGridFill />
               <p className="menu-label">Dashboard</p>
-            </button>
+            </Link>
           </li>
           <li>
             <Link
