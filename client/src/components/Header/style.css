@@ -95,6 +95,7 @@
 .btn-menu-item {
   display: flex;
   flex-direction: row;
+  text-decoration: none;
   padding: 15px;
   border: none;
   font-size: 16px;
@@ -142,6 +143,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  text-decoration: none;
   border: none;
   width: 20%;
   min-width: 136px;
@@ -216,6 +219,39 @@
   transition: all 0.3s ease;
 }
 
+.option-filter {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  padding: 4px;
+  background-color: #e3e3e3;
+  border-radius: 5px;
+  top: 45px;
+  width: 200px;
+}
+
+.option-filter-item {
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  font-size: 15px;
+  border: none;
+  border-radius: 5px;
+  margin: 2px;
+  color: #777;
+  transition: all 0.3s ease;
+}
+
+.option-filter-item p {
+  margin-left: 10px;
+}
+
+.option-filter-item:hover {
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
 .btn-search-header {
   display: flex;
   justify-content: center;
@@ -238,7 +274,7 @@
   transition: all 0.3s ease;
 }
 
-.find-call-header-input {
+.search-call-header-input {
   padding: 10px 10px 10px 20px;
   height: 40px;
   width: 0;
@@ -252,7 +288,7 @@
   transition: width 0.3s ease;
 }
 
-.find-call-header-input.hide {
+.search-call-header-input.hide {
   width: 70%;
   opacity: 1;
   pointer-events: visible;

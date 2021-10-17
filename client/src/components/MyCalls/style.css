@@ -20,18 +20,40 @@
   width: 100%;
 }
 
+.label-calls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #1565c0;
+  height: 50px;
+  border-radius: 7px;
+  margin: 10px 10px 2px 10px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #e3e3e3;
+  color: #1565c0;
+  overflow: hidden;
+}
+
 .mycalls-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-decoration: none;
   border: none;
   border-radius: 7px;
   margin: 10px 10px 2px 10px;
   font-size: 16px;
+  background-color: #eee;
+  color: #444;
+  transition: all 0.3s ease;
+  overflow: hidden;
 }
 
 .mycalls-item:hover {
   cursor: pointer;
+  background-color: #fff;
+  transition: all 0.3s ease;
 }
 
 .mycalls-item-status {
@@ -39,6 +61,7 @@
   width: 25px;
   height: 50px;
   border-radius: 6px 0 0 6px;
+  background-color: transparent;
 }
 
 .mycalls-item-number {
@@ -64,7 +87,6 @@
   display: flex;
   justify-content: left;
   padding: 7px 15px 7px 15px;
-  border-right: 1px solid #bbb;
   width: 40%;
   min-width: 400px;
 }
@@ -74,6 +96,7 @@
   justify-content: left;
   padding: 7px 15px 7px 15px;
   border-right: 1px solid #bbb;
+  border-left: 1px solid #bbb;
   width: 5%;
   min-width: 130px;
 }

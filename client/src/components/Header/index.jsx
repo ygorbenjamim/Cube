@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import {
   RiUser3Line,
   RiSearchLine,
+  RiCheckboxBlankCircleLine,
+  RiCheckboxBlankCircleFill,
+  RiAddBoxLine,
   RiFilter2Fill,
   RiSettings2Line,
   RiAlertLine,
@@ -11,21 +14,18 @@ import {
   RiGridLine,
   RiGridFill
 } from "react-icons/ri";
+import { Link } from 'react-router-dom';
 import './style.css';
 
 const Header = () => {
   // Variáveis
   const [submenu, setSubmenu] = useState('none');
   const [displaySearch, setDisplaySearch] = useState('flex');
+  const [displayFilter, setDisplayFilter] = useState('none');
+  const [filterType, setFilterType] = useState('id');
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-  var side = document.getElementsByClassName('sidebar');
 
   // Funções
-  function handleMenu() {
-    var sidebarName = document.querySelector('.sidebar');
-    sidebarName.classList.toggle('hide');
-  }
-
   function handleSubmenu() {
     if (submenu === 'none') {
       setSubmenu('flex');
@@ -34,22 +34,25 @@ const Header = () => {
     }
   }
 
+  function handleMenu() {
+    var sidebarName = document.querySelector('.sidebar');
+    sidebarName.classList.toggle('hide');
+  }
+
   function handleSearch() {
-    var searchInput = document.querySelector('.find-call-header-input');
+    var searchInput = document.querySelector('.search-call-header-input');
     var filterBtn = document.querySelector('.btn-filter-header');
     searchInput.classList.toggle('hide');
     filterBtn.classList.toggle('hide');
   }
 
+  function showFilter() {
+    displayFilter === 'none' ? setDisplayFilter('flex') : setDisplayFilter('none');
+  }
+
   useEffect(() => {
     window.addEventListener('resize', () => {
       setScreenWidth(window.innerWidth);
-    });
-    side[0].addEventListener('click', () => {
-      alert('In');
-    });
-    side[0].addEventListener('focusout', () => {
-      alert('Out');
     });
     if(screenWidth <= 660){
       setDisplaySearch('none');
@@ -112,10 +115,24 @@ const Header = () => {
             </button>
           </li>
           <li>
-            <button className="btn-menu-item">
+            <Link
+              className="btn-menu-item"
+              to="/"
+              onClick={ handleMenu }
+            >
+              <RiAddBoxLine />
+              <p className="menu-label">Abrir chamado</p>
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="btn-menu-item"
+              to="/mycalls"
+              onClick={ handleMenu }
+            >
               <RiListOrdered />
               <p className="menu-label">Meus atendimentos</p>
-            </button>
+            </Link>
           </li>
           <li>
             <button className="btn-menu-item">
@@ -141,14 +158,76 @@ const Header = () => {
           className="search-call-header"
           style={{ display: displaySearch }}
         >
+          <div
+            className="option-filter"
+            style={{ display: displayFilter }}
+          >
+            <button
+              className="option-filter-item"
+              onClick={() => {
+                setFilterType('id')
+                setDisplayFilter('none')
+              }}
+            >
+              {
+                filterType === 'id' ?
+                <RiCheckboxBlankCircleFill size={ 20 }/> :
+                <RiCheckboxBlankCircleLine size={ 20 }/>
+              }
+              <p>Número</p>
+            </button>
+            <button
+              className="option-filter-item"
+              onClick={() => {
+                setFilterType('title')
+                setDisplayFilter('none')
+              }}
+            >
+              {
+                filterType === 'title' ?
+                <RiCheckboxBlankCircleFill size={ 20 }/> :
+                <RiCheckboxBlankCircleLine size={ 20 }/>
+              }
+              <p>Título</p>
+            </button>
+            <button
+              className="option-filter-item"
+              onClick={() => {
+                setFilterType('description')
+                setDisplayFilter('none')
+              }}
+            >
+              {
+                filterType === 'description' ?
+                <RiCheckboxBlankCircleFill size={ 20 }/> :
+                <RiCheckboxBlankCircleLine size={ 20 }/>
+              }
+              <p>Descrição</p>
+            </button>
+            <button
+              className="option-filter-item"
+              onClick={() => {
+                setFilterType('open')
+                setDisplayFilter('none')
+              }}
+            >
+              {
+                filterType === 'open' ?
+                <RiCheckboxBlankCircleFill size={ 20 }/> :
+                <RiCheckboxBlankCircleLine size={ 20 }/>
+              }
+              <p>Data de abertura</p>
+            </button>
+          </div>
           <button
             className="btn-filter-header"
+            onClick={ showFilter }
           >
             <RiFilter2Fill />
           </button>
           <input
-            className="find-call-header-input"
-            placeholder="Buscar Chamado..."
+            className="search-call-header-input"
+            placeholder="Buscar chamado..."
           />
           <button
             className="btn-search-header"
@@ -167,12 +246,18 @@ const Header = () => {
         </div>
       </div>
       <div className="header-bottom">
-        <button className="header-bottom-item">
+        <Link
+          className="header-bottom-item"
+          to="/mycalls"
+        >
           <p>Meus atendimentos</p>
-        </button>
-        <button className="header-bottom-item">
+        </Link>
+        <Link
+          className="header-bottom-item"
+          to="/mycalls"
+        >
           <p>Meu departamento</p>
-        </button>
+        </Link>
       </div>
     </div>
   );

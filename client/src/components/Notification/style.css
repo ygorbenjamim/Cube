@@ -54,17 +54,25 @@
   bottom: 90px;
   padding: 15px;
   width: 270px;
-  height: 0;
-  opacity: 0;
-  pointer-events: none;
+  height: 350px;
   border-radius: 8px;
   background-color: #fff;
-  transition: height 0.2s linear;
+  overflow: auto;
 }
 
-.notification-content.hide {
-  opacity: 1;
-  height: 350px;
-  pointer-events: visible;
-  transition: height 0.2s linear;
+.notification-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.notification-link-item {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  border-radius: 5px;
+  width: 100%;
+  margin: 3px;
+  background-color: #1565c0;
+  color: #e3e3e3;
 }

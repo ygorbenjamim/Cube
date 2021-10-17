@@ -1,12 +1,50 @@
 import React, { useEffect, useState } from 'react';
 import {
-  RiNotification2Line
+  RiNotification2Line,
+  RiCheckboxBlankCircleLine
 } from 'react-icons/ri';
+import { Link } from 'react-router-dom';
 import './style.css';
 
 const Notification = () => {
   const [displayNotification, setDisplayNotification] = useState('flex');
-  const value = 89;
+  const [displayContent, setDisplayContent] = useState('none');
+
+  // Simulação de dados
+  const getNotification = [
+    /*{
+      id: '000001',
+      title: 'Solicitação de acesso',
+      description: 'Eu estou precisando de um novo usuário para AuthenticatorResponse.'
+    },
+    {
+      id: '000002',
+      title: 'Problema de conexão',
+      description: 'Eu estou precisando de um novo usuário para AuthenticatorResponse.'
+    }
+    */
+  ]
+
+  const value = getNotification.length;
+
+  const resultNotification = getNotification.map((value) => {
+    return(
+      <Link
+        className="notification-link"
+        to="/mycalls"
+        key={ value.id }
+      >
+        <RiCheckboxBlankCircleLine size={ 25 }/>
+        <p className="notification-link-item">
+          {
+            value.title.length > 21 ?
+            value.title.substr(0, 22) + '...' :
+            value.title
+          }
+        </p>
+      </Link>
+    );
+  });
 
   useEffect(() => {
     if(value <= 0){
@@ -15,8 +53,7 @@ const Notification = () => {
   }, [ value ]);
 
   function handleNotification() {
-    var content = document.querySelector('.notification-content');
-    content.classList.toggle('hide');
+    displayContent === 'none' ? setDisplayContent('flex') : setDisplayContent('none');
     setDisplayNotification('none');
   }
 
@@ -36,8 +73,15 @@ const Notification = () => {
           { value > 99 ? '+99' : value }
         </p>
       </div>
-      <div className="notification-content">
-        
+      <div
+        className="notification-content"
+        style={{ display: displayContent }}
+      >
+        {
+          getNotification.length < 1 ?
+          <p>Nenhuma notificação encontrada.</p> :
+          resultNotification
+        }
       </div>
     </div>
   );
