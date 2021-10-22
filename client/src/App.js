@@ -1,6 +1,6 @@
 import Header from './components/Header';
 import Home from './components/Home';
-import MyCalls from './components/MyCalls';
+import CallList from './components/CallList';
 import Dashboard from './components/Dashboard';
 import Footer from './components/Footer';
 import Notification from './components/Notification';
@@ -12,7 +12,7 @@ function App() {
       <Header />
       <Switch>
         <Route path='/dashboard' component={ Dashboard } />
-        <Route path='/mycalls' component={ MyCalls } />
+        <Route path='/calllist' render={ () => <CallList title='Meus atendimentos'/> }/>
         <Route path='/' component={ Home } />
       </Switch>
       <Footer />

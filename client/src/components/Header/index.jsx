@@ -131,7 +131,7 @@ const Header = () => {
           <li>
             <Link
               className="btn-menu-item"
-              to="/mycalls"
+              to="/calllist"
               onClick={ handleMenu }
             >
               <RiListOrdered />
@@ -252,13 +252,13 @@ const Header = () => {
       <div className="header-bottom">
         <Link
           className="header-bottom-item"
-          to="/mycalls"
+          to="/calllist"
         >
           <p>Meus atendimentos</p>
         </Link>
         <Link
           className="header-bottom-item"
-          to="/mycalls"
+          to="/calllist"
         >
           <p>Meu departamento</p>
         </Link>

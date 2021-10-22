@@ -5,7 +5,7 @@ import {
 } from 'react-icons/ri';
 import './style.css';
 
-const MyCalls = () => {
+const CallList = (props) => {
   // Data atual
   const date = new Date();
   const day = String(date.getDate()).padStart(2, '0');
@@ -91,7 +91,7 @@ const MyCalls = () => {
   return (
     <div className="mycalls-container">
       <div className="mycalls-top">
-        <p>Meus atendimentos</p>
+        <p>{ props.title }</p>
       </div>
       <table>
         <thead>
@@ -113,4 +113,4 @@ const MyCalls = () => {
   );
 }
  
-export default MyCalls;
+export default CallList;
