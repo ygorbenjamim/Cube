@@ -10,6 +10,7 @@ import {
   RiInboxUnarchiveLine,
   RiExchangeBoxLine
 } from "react-icons/ri";
+import { Link } from 'react-router-dom';
 import './style.css';
 
 const Home = () => {
@@ -73,96 +74,105 @@ const Home = () => {
           <p>Abrir novo chamado</p>
         </div>
         <div className="mid-body-home">
-          <button
+          <Link
             className="call-option"
             style={{ display: sector[0] }}
+            to='/subsector-ti'
           >
             <RiComputerLine
               size={30}
               color={'#1e88e5'}
             />
             <p>TI</p>
-          </button>
-          <button
+          </Link>
+          <Link
             className="call-option"
             style={{ display: sector[1] }}
+            to='/subsector-financial'
           >
             <RiBankLine
               size={30}
               color={'#1e88e5'}
             />
             <p>Financeiro</p>
-          </button>
-          <button
+          </Link>
+          <Link
             className="call-option"
             style={{ display: sector[2] }}
+            to='/subsector-supervisor'
           >
             <RiPhoneFindLine
               size={30}
               color={'#1e88e5'}
             />
             <p>Fiscal</p>
-          </button>
-          <button
+          </Link>
+          <Link
             className="call-option"
             style={{ display: sector[3] }}
+            to='/subsector-bi'
           >
             <RiBarChartFill
               size={30}
               color={'#1e88e5'}
             />
             <p>BI</p>
-          </button>
-          <button
+          </Link>
+          <Link
             className="call-option"
             style={{ display: sector[4] }}
+            to='/subsector-purchases'
           >
             <RiInboxArchiveLine
               size={30}
               color={'#1e88e5'}
             />
             <p>Compras</p>
-          </button>
-          <button
+          </Link>
+          <Link
             className="call-option"
             style={{ display: sector[5] }}
+            to='/subsector-sales'
           >
             <RiInboxUnarchiveLine
               size={30}
               color={'#1e88e5'}
             />
             <p>Vendas</p>
-          </button>
-          <button
+          </Link>
+          <Link
             className="call-option"
             style={{ display: sector[6] }}
+            to='/subsector-marketing'
           >
             <RiSendPlaneFill
               size={30}
               color={'#1e88e5'}
             />
             <p>Marketing</p>
-          </button>
-          <button
+          </Link>
+          <Link
             className="call-option"
             style={{ display: sector[7] }}
+            to='/subsector-logistics'
           >
             <RiLayoutFill
               size={30}
               color={'#1e88e5'}
             />
             <p>Logística</p>
-          </button>
-          <button
+          </Link>
+          <Link
             className="call-option"
             style={{ display: sector[8] }}
+            to='/subsector-commercial'
           >
             <RiExchangeBoxLine
               size={30}
               color={'#1e88e5'}
             />
             <p>Comercial</p>
-          </button>
+          </Link>
         </div>
       </div>
     </div>
