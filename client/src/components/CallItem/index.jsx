@@ -16,8 +16,39 @@ const CallItem = (props) => {
     });
     if(screenWidth <= 1400){
       setLimitChar(45);
-    } else {
-      //setLimitChar(120);
+    }
+    if(screenWidth >= 1401 && screenWidth <= 1500){
+      setLimitChar(60);
+    }
+    if(screenWidth >= 1501 && screenWidth <= 1600){
+      setLimitChar(67);
+    }
+    if(screenWidth >= 1601 && screenWidth <= 1700){
+      setLimitChar(74);
+    }
+    if(screenWidth >= 1701 && screenWidth <= 1800){
+      setLimitChar(81);
+    }
+    if(screenWidth >= 1801 && screenWidth <= 1900){
+      setLimitChar(87);
+    }
+    if(screenWidth >= 1901 && screenWidth <= 2000){
+      setLimitChar(94);
+    }
+    if(screenWidth >= 2001 && screenWidth <= 2100){
+      setLimitChar(99);
+    }
+    if(screenWidth >= 2101 && screenWidth <= 2200){
+      setLimitChar(106);
+    }
+    if(screenWidth >= 2201 && screenWidth <= 2300){
+      setLimitChar(111);
+    }
+    if(screenWidth >= 2301 && screenWidth <= 2400){
+      setLimitChar(116);
+    }
+    if(screenWidth >= 2401 && screenWidth <= 2500){
+      setLimitChar(121);
     }
   }, [ screenWidth ]);
 
