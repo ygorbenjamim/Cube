@@ -1,4 +1,4 @@
-.mycalls-container {
+.body-container {
   display: flex;
   flex-direction: column;
   margin: 40px;
@@ -7,7 +7,7 @@
   min-height: 100vh;
 }
 
-.mycalls-top {
+.body-top {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,4 +18,8 @@
   border-radius: 14px 14px 0 0;
   height: 40px;
   width: 100%;
+}
+
+.body-mid {
+  padding: 15px;
 }

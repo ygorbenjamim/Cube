@@ -22,7 +22,8 @@ function App() {
         <Route path='/subsector-marketing' render={ () => <Subsector sector='Marketing'/> } />
         <Route path='/subsector-logistics' render={ () => <Subsector sector='Logística'/> } />
         <Route path='/subsector-commercial' render={ () => <Subsector sector='Comercial'/> } />
-        <Route path='/calllist' render={ () => <CallList title='Meus atendimentos'/> }/>
+        <Route path='/mycalls' render={ () => <CallList title='Meus atendimentos'/> }/>
+        <Route path='/mydepartment' render={ () => <CallList title='Meu departamento'/> }/>
         <Route path='/' component={ Home } />
       </Switch>
       <Footer />

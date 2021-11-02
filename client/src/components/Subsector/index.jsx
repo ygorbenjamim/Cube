@@ -1,8 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Body from '../Body';
 import './style.css';
 
 const Subsector = (props) => {
+
+  // Simulação de dados
   const subsectors = [
     {
       id: 1,
@@ -34,16 +37,11 @@ const Subsector = (props) => {
   });
 
   return (
-    <div className="subsector-container">
-      <div className="body-subsector">
-        <div className="top-body-subsector">
-          <p>Subsetores do { props.sector }</p>
-        </div>
-        <div className="mid-body-subsector">
-          { resultSubsector }
-        </div>
-      </div>
-    </div>
+    <Body
+      title={ 'Subsetores do ' + props.sector }
+      label={ false }
+      render={ resultSubsector }
+    />
   );
 }
  

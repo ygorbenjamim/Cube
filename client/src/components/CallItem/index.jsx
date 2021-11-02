@@ -64,7 +64,7 @@ const CallItem = (props) => {
       <div
         className="call-item-status"
         style={{
-          backgroundColor: props.status === true ? '#77dd77' : '#ff6961'
+          backgroundColor: props.expired === true ? '#ff6961' : '#77dd77'
         }}
       >
       </div>

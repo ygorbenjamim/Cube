@@ -11,6 +11,8 @@
   color: #444;
   transition: all 0.3s ease;
   overflow: hidden;
+  /*overflow-x: scroll;*/
+  /*scroll-behavior: smooth;*/
 }
 
 .call-item:hover {

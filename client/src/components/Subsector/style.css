@@ -1,36 +1,3 @@
-.subsector-container {
-  background-color: #e3e3e3;
-}
-
-.body-subsector {
-  display: flex;
-  flex-direction: column;
-  margin: 40px;
-  border: 1px solid #aaa;
-  border-radius: 15px;
-  min-height: 100vh;
-}
-
-.top-body-subsector {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #1565c0;
-  color: #e3e3e3;
-  font-weight: bold;
-  font-size: 16px;
-  border-radius: 14px 14px 0 0;
-  height: 40px;
-  width: 100%;
-}
-
-.mid-body-subsector {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 20px;
-}
-
 .item-subsector {
   display: flex;
   justify-content: center;

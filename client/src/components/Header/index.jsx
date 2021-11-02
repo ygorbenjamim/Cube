@@ -157,7 +157,12 @@ const Header = () => {
             color={'#e3e3e3'}
           />
         </button>
-        <h1>Cube</h1>
+        <Link
+          className='logo-name'
+          to='/'
+        > 
+          <h1>Cube</h1>
+        </Link>
         <div
           className="search-call-header"
           style={{ display: displaySearch }}
@@ -252,13 +257,13 @@ const Header = () => {
       <div className="header-bottom">
         <Link
           className="header-bottom-item"
-          to="/calllist"
+          to="/mycalls"
         >
           <p>Meus atendimentos</p>
         </Link>
         <Link
           className="header-bottom-item"
-          to="/calllist"
+          to="/mydepartment"
         >
           <p>Meu departamento</p>
         </Link>
