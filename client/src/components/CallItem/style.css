@@ -56,13 +56,19 @@
   min-width: 400px;
 }
 
+.call-item-title p, .call-item-description p{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .call-item-open {
   display: flex;
   justify-content: center;
   padding: 7px 15px 7px 15px;
   border-right: 1px solid #bbb;
   border-left: 1px solid #bbb;
-  width: 5%;
+  width: 10%;
   min-width: 130px;
 }
 
@@ -71,7 +77,7 @@
   justify-content: center;
   padding: 7px 15px 7px 15px;
   border-right: 1px solid #bbb;
-  width: 5%;
+  width: 10%;
   min-width: 130px;
   font-weight: bold;
 }
