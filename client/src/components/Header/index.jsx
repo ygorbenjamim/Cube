@@ -131,7 +131,7 @@ const Header = () => {
           <li>
             <Link
               className="btn-menu-item"
-              to="/calllist"
+              to="/mycalls"
               onClick={ handleMenu }
             >
               <RiListOrdered />
