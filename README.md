@@ -12,7 +12,7 @@
 
 ### Meus atendimentos
 <p align="justify">São os chamados que estão registrados no nome do usuário</p>
-![3](https://user-images.githubusercontent.com/22685987/147886885-54b03f9f-7582-4ff0-94bf-e70a368cf7a1.png)
+<img src="https://user-images.githubusercontent.com/22685987/147886885-54b03f9f-7582-4ff0-94bf-e70a368cf7a1.png" />
 
 ### Meu departamento
 <p align="justify">São os chamados que estão registrados para o departamento do usuário.</p>
