@@ -26,5 +26,5 @@
 
 ### Componente de notificações
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/22685987/147886944-8adac8ac-9969-4998-916b-1a2e24b26723.png" height="500px" />  <img src="https://user-images.githubusercontent.com/22685987/147886989-786471a2-4150-4325-8075-ec671fc2cea3.png" height="500px" />  <img src="https://user-images.githubusercontent.com/22685987/147886961-03e539fb-de59-44a9-a511-7864e47ff0cb.png" height="200px" />
+  <img src="https://user-images.githubusercontent.com/22685987/147886944-8adac8ac-9969-4998-916b-1a2e24b26723.png" height="500px" />  <img src="https://user-images.githubusercontent.com/22685987/147886989-786471a2-4150-4325-8075-ec671fc2cea3.png" height="500px" />  <img src="https://user-images.githubusercontent.com/22685987/147886961-03e539fb-de59-44a9-a511-7864e47ff0cb.png" />
 </p>
